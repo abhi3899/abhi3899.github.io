@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+	<script type="text/javascript" src = "vall2.js">
+	</script>
+</head>
+<body>
+	<header>
+		<section style="background-image: url(head.jpeg); ">
+		<aside style="float: left; padding:10px">
+		<img src="Logo.png" width="80" ></img>  
+		</aside>
+		<H1 style=" text-align:center;font-family:Comic Sans MS ; color:mediumseagreen">MY PAGE FOR COMPUTER HACKING</H1>
+		<nav  align="center" style="color:green;" >
+			<a href="/index.html" target="_self" style="border:solid; padding:10px;color:mediumseagreen">HOME</a>
+			
+		</nav><br><br>
+	</section>
+	</header>
+	<br><br><br>
+	<section style="background-image: url(bg.jpg); padding-top: 10px">
+		<H1 style=" text-align:center;font-family:Comic Sans MS ; ">LET US KNOW U TO CONTACT U</H1>
+		<form action="" method="post" name="form1" onSubmit=" return formValidation();">
+		Enter Name:<input type="text" placeholder="Enter First Name" name="sname" id="sname"><br><br>
+		Phone no:<input type="text" placeholder="Enter Phone" name="sphn" id="sphn"><br><br>
+		Enter Email:<input type="text" placeholder="Enter First Name" name="seid" id="seid"><br><br>
+		<b>GENDER:</b>
+			<input type="radio" name="M" id="M" value="MALE" / >MALE
+			<input type="radio" name="F" id="F" value="FEMALE"/>FMALE<br><br>
+			<b>Where you came to know about my site?</b><br>
+			<input type="checkbox" name="Friends" id="Friends" value="Friends" />Friends<br>
+			<input type="checkbox" name="SM" id="SM" value="Social Media" />Social Media<br>
+			<input type="checkbox" name="Blogs" id="Blogs" value="Blogs" />Blogs<br>
+			<input type="checkbox" name="NP" id="NP" value="Newspaper" />Newspaper<br>
+			<input type="checkbox" name="Family" id="Family" value="Family" />Family<br>
+			<input type="checkbox" name="Articles" id="Articles" value="Articles" />Articles<br>
+			<b>ADDRESS:</b><textarea rows="4" cols="50" name="address" id="address" form="form1"></textarea><br><br>
+		<button type = "submit">SUBMIT</button>
+		<section >	
+			<h1>You Entered</h1><br>
+			<b>Name:</b><p id="Ename"></p>
+			<b>Contact Number:</b><p id="Ecnum"></p>
+			<b>Email Id:</b><p id="Eeid"></p>
+			<b>Address:</b><p id="Eaddress"></p>
+			<b>Gender:</b><p id="Egender"></p>
+			<b>You caught Us through:</b><p id="EWhere"></p>
+			<b>Place:</b><p id="demo"></p> 
+		</section>
+		<section>
+			<p>Click the button to get your coordinates.</p>
+​			<button onclick="getLocation()">Try It</button>
+			<p id="demo"></p>
+			<script>
+				var loc = document.getElementById("demo");
+				function getLocation() 
+				{
+  					if (navigator.geolocation)
+  					{
+    					navigator.geolocation.getCurrentPosition(showPosition,showError);
+  					} 
+  					else 
+  					{ 
+    					loc.innerHTML = "Geolocation is not supported by this browser.";
+  					}
+				}
+				function showPosition(position) 
+				{
+  					loc.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+				}
+				function showError(error) 
+				{
+					switch(error.code)
+					{
+						case error.PERMISSION_DENIED:
+							loc.innerHTML = "User denied accesss!";
+							break;
+						case error.TIMEOUT:
+							loc.innerHTML = "Request timed out!";
+							break;
+						case error.UNKNOWN_ERROR:
+							loc.innerHTML = "Error can not be decided!";
+							break;
+						case error.POSITION_UNAVAILABLE:
+							loc.innerHTML = "Position not detected!";
+							break;
+					}
+				}
+			</script>
+		</section>
+        <footer align="center" background-color="blue">
+			email-id : 170303105169@paruluniversity.ac.in<br>
+			Contact Us : 7405685416<br>
+			Address : XYZ<br>VADODARA<br>GUJARAT
+		</footer>
+</body>
+</html>

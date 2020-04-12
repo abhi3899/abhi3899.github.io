@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Practical 1
+    </title>
+    <style>
+#container { 
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: mediumseagreen;
+  align-self: center;
+}
+#animate { 
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+  </head>
+  <body>
+  <header>
+    <section style="background-image: url(head.jpeg); ">
+    <aside style="float: left; padding:10px">
+    <img src="Logo.png" width="80" ></img>  
+    </aside>
+    <H1 style=" text-align:center;font-family:Comic Sans MS ; color:mediumseagreen">MY PAGE FOR COMPUTER HACKING</H1>
+    <nav  align="center" style="color:green;" >
+      <a href="/index.html" target="_self" style="border:solid; padding:10px;color:mediumseagreen">HOME</a>
+      
+    </nav><br><br>
+  </section> 
+<!— JavaScript animation effects  -->
+<p><button onclick="myMove()">Perform JS animation on svg inside box</button></p> 
+<input type = "button" value = "Move the box with JS animation" onclick = "moveRight();" /><br><br>
+<div id="container" align="center"> JS ANIMATION:
+    <svg width="100" height="100" id="animate" >
+      <circle  cx="50" cy="50" r="40" stroke-width="4" stroke="black"  opacity="0.4"/>
+    </svg>
+    </div>
+<br><br>
+<script>
+  var ani = null;
+            
+            function init() {
+               ani = document.getElementById('container');
+               ani.style.position= 'relative'; 
+               ani.style.left = '0px'; 
+            }
+            function moveRight() {
+               ani.style.left = parseInt(ani.style.left) + 100 + 'px';
+            }
+            
+            window.onload = init;
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) 
+    {
+      
+      clearInterval(id);
+    } 
+    else 
+    {
+      pos++; 
+      elem.style.bottom = pos + "px"; 
+      elem.style.right = pos + "px"; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+</script>
+</body>
+</html>
+
+  </header>
+  <footer align="center" background-color="blue">
+    email-id : 170303105169@paruluniversity.ac.in<br>
+    Contact Us : 7405685416<br>
+    Address : XYZ<br>VADODARA<br>GUJARAT
+  </footer>
+  </body>
+</html>

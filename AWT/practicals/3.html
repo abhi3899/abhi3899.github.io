@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GRAPHICS</title>
+</head>
+<body>
+	<header>
+		<aside style="float: left; padding:10px">
+		<img src="Logo.png" width="80" ></img>
+		</aside>
+		<canvas id="canv1" width="1200" height="100" ></canvas>
+	<script>
+		var can = document.getElementById('canv1');
+		var ctxt = can.getContext('2d');
+		ctxt.font = "30px Georgia";
+		ctxt.strokeStyle="green";
+		ctxt.strokeText("SVG PRACTICE !!  ",10,50);
+	</script>
+		<nav align="center" display="flex" color="green">
+			<a href="/index.html" target="_self" style="border:solid; padding:10px">HOME</a>
+		</nav><br>
+	</header>
+	<section style="background-image: url(bg.jpg); padding-top: 10px">
+	
+	<h1 align="center" >CANVAS</h1>
+	<canvas id="canv" width="200" height="100" style="border:2px solid" ></canvas>
+	<script>
+		var can = document.getElementById('canv');
+		var cntxt = can.getContext('2d');
+		var grad = cntxt.createRadialGradient(75,50,5,90,60,100);
+		grad.addColorStop(0,"blue");
+		grad.addColorStop(1,"black");
+		cntxt.fillStyle = grad;
+		cntxt.fillRect(10,10,150,80);
+	</script>
+	<canvas id="LG" width="820" height="200" style="border:2px solid" ></canvas>
+	<script>
+		var s2 = document.getElementById('LG');
+		var s2ctxt = s2.getContext('2d');
+		s2ctxt.fillRect(15,15,100,100);
+		s2ctxt.clearRect(35,35,60,60);
+		s2ctxt.strokeRect(40,40,50,50);
+		s2ctxt.fillRect(185,185,20,20);
+		s2ctxt.clearRect(175,175,10,10);
+		s2ctxt.strokeRect(165,165,5,5);
+		s2ctxt.fillRect(140,140,15,15);
+
+		s2ctxt.fillRect(200,15,100,100);
+		s2ctxt.clearRect(220,35,60,60);
+		s2ctxt.strokeRect(225,40,50,50);
+		s2ctxt.fillRect(385,185,20,20);
+		s2ctxt.clearRect(375,175,10,10);
+		s2ctxt.strokeRect(365,165,5,5);
+		s2ctxt.fillRect(340,140,15,15);
+
+		s2ctxt.fillRect(400,15,100,100);
+		s2ctxt.clearRect(420,35,60,60);
+		s2ctxt.strokeRect(425,40,50,50);
+		s2ctxt.fillRect(585,185,20,20);
+		s2ctxt.clearRect(575,175,10,10);
+		s2ctxt.strokeRect(565,165,5,5);
+		s2ctxt.fillRect(540,140,15,15);
+
+		s2ctxt.fillRect(600,15,100,100);
+		s2ctxt.clearRect(620,35,60,60);
+		s2ctxt.strokeRect(625,40,50,50);
+		s2ctxt.fillRect(785,185,20,20);
+		s2ctxt.clearRect(775,175,10,10);
+		s2ctxt.strokeRect(765,165,5,5);
+		s2ctxt.fillRect(740,140,15,15);
+		ctxt.font = "30px Georgia";
+		ctxt.strokeStyle="green";
+		ctxt.strokeText("SVG PRACTICE!!  ",10,50);
+	</script>
+	<canvas id="endcanv" width="200" height="100" style="border:2px solid" ></canvas>
+	<script>
+		var can1 = document.getElementById('endcanv');
+		var cntxt1 = can1.getContext('2d');
+		var grad1 = cntxt1.createRadialGradient(75,50,5,90,60,100);
+		grad1.addColorStop(0,"blue");
+		grad1.addColorStop(1,"black");
+		cntxt1.fillStyle = grad1;
+		cntxt1.fillRect(10,10,150,80);
+	</script>
+		<h1 align="center" >SVG</h1>
+<!—scripting for the svg, shapes included are rectangle circle ellipse and round rectangel-->
+		<svg width="100" height="100">
+			<rect  width="100" height="100" stroke-width="4" stroke="black" fill="green" opacity="0.4"/>
+		</svg>
+		<svg width="100" height="100">
+			<circle  cx="50" cy="50" r="40" stroke-width="4" stroke="black" fill="green" opacity="0.4"/>
+		</svg>
+		<svg width="300" height="200">
+			<ellipse cx="130" cy="140" rx="80" ry="55" stroke-width="4" stroke="black" fill="green" opacity="0.4"/>
+		</svg>
+		<svg width="100" height="100">
+			<rect x="10" y="10" rx="10" ry="10"  width="80" height="80" stroke-width="4" stroke="black" fill="green" opacity="0.4"/>
+		</svg>
+		<svg width="100" height="100">
+			<rect  width="100" height="100" stroke-width="4" stroke="black" fill="blue" opacity="0.4"/>
+		</svg>
+		<svg width="100" height="100">
+			<circle  cx="50" cy="50" r="40" stroke-width="4" stroke="black" fill="blue" opacity="0.4"/>
+		</svg>
+		<svg width="300" height="200">
+			<ellipse cx="130" cy="140" rx="80" ry="55" stroke-width="4" stroke="black" fill="blue" opacity="0.4"/>
+		</svg>
+		<svg width="100" height="100">
+			<rect x="10" y="10" rx="10" ry="10"  width="80" height="80" stroke-width="4" stroke="black" fill="blue" opacity="0.4"/>
+		</svg>
+		<canvas id="canv" width="200" height="100" style="border:2px solid" ></canvas>
+		<script>
+			
+		</script>
+	</section>
+	<footer align="center" background-color="blue">
+        email-id : 170303105169@paruluniversity.ac.in<br>
+        Contact Us : 7405685416<br>
+        Address : XYZ<br>VADODARA<br>GUJARAT
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

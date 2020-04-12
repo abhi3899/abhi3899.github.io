@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Practical 1
+		</title>
+	</head>
+	<body>
+	<header>
+		<section style="background-image: url(head.jpeg); ">
+		<aside style="float: left; padding:10px">
+		<img src="Logo.png" width="80" ></img>  
+		</aside>
+		<H1 style=" text-align:center;font-family:Comic Sans MS ; color:mediumseagreen">MY PAGE FOR COMPUTER HACKING</H1>
+		<nav  align="center" style="color:green;" >
+			<a href="/index.html" target="_self" style="border:solid; padding:10px;color:mediumseagreen">HOME</a>
+			
+		</nav><br><br>
+	</section>
+	</header>
+	<section>
+		<input type="button" onclick="location.href='session.html';" value="Save your content in SESSION STORAGE" />
+		<input type="button" onclick="location.href='local.html';" value="Save your content in LOCAL STORAGE" />
+	</section>
+    <footer align="center" background-color="blue">
+        email-id : 170303105169@paruluniversity.ac.in<br>
+        Contact Us : 7405685416<br>
+        Address : XYZ<br>VADODARA<br>GUJARAT
+    </footer>
+	</body>
+</html>
+
+Session.html
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Its  " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry.";
+  }
+}
+</script>
+</head>
+<body>
+
+<p><button onclick="clickCounter()" type="button">Click </button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+</body>
+</html>
+
+Local.html
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Its  " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry.";
+  }
+}
+</script>
+</head>
+<body>
+
+<p><button onclick="clickCounter()" type="button">Click </button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+</body>
+</html>

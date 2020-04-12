@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GRAPHICS</title>
+	<style >
+		body
+		{
+			border: 10px solid transparent;
+			padding: 15px;
+			border-image: url(border.png) 30 stretch;
+			border-image-width: 30px;
+		}
+		#up_down
+		{
+			background-image: linear-gradient(to bottom, rgba(255,0,0,0.52), rgba(255,208,160,0.73)), url(try.jpeg);
+			width: 20%;
+			height: 60px;
+			background-size: cover;
+
+		}
+		#left_right 
+		{
+			background-image: linear-gradient(to left, mediumseagreen, pink);
+			background-color: red;
+			height: 60px;
+			width: 300px;
+		}
+		#angles 
+		{
+			background-image: linear-gradient(-180deg, mediumseagreen, pink);
+			background-color: red;
+			height: 60px;
+			width: 300px;
+		}
+		#multi_color 
+		{
+			background-image: linear-gradient(to left,red, mediumseagreen, pink, blue, grey, white);
+			background-color: red;
+			height: 60px;
+			width: 300px;
+		}
+		#repeat_grad 		{
+			background-image: repeating-linear-gradient(red, mediumseagreen 10%, pink 20%);
+			background-color: red;
+			height: 60px;
+			width: 300px;
+		}
+		#radial
+		{
+			height: 150px;
+			width: 200px;
+			background-color: red;
+			background-image: radial-gradient(mediumseagreen, blue, pink);
+		}
+		#radial_diff_spaced 
+		{
+			height: 150px;
+			width: 200px;
+			background-color: red;
+			background-image: radial-gradient(mediumseagreen 5%, blue 20%, pink 60%);
+		}
+		#radial_shape
+		{
+			height: 150px;
+			width: 200px;
+			background-color: red;
+			background-image: radial-gradient(circle,purple, blue, pink);
+		}
+		#radial_repeat 
+		{
+			height: 150px;
+			width: 200px;
+			background-color: red;
+			background-image: repeating-radial-gradient(purple, blue 10%, pink 15%);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<section style="background-image: url(head.jpeg); ">
+		<aside style="float: left; padding:10px">
+		<img src="Logo.png" width="80" ></img>  
+		</aside>
+		<H1 style=" text-align:center;font-family:Comic Sans MS ; color:mediumseagreen">MY PAGE FOR COMPUTER HACKING</H1>
+		<nav  align="center" style="color:green;" >
+			<a href="home.html" target="_self" style="border:solid; padding:10px;color:mediumseagreen">HOME</a>
+			<a style="border:solid; padding:10px;color:mediumseagreen">ABOUT US</a>
+			<a href="video.html" target="_self" style="border:solid; padding:10px; color:mediumseagreen">VIDEOS</a>
+			<a href="audio.html" target="_self" style="border:solid; padding:10px ;color:mediumseagreen">AUDIOS</a>
+			<a href="graphics.html" target="_self" style="border:solid; padding:10px; color:mediumseagreen">GRAPHICS</a>
+			<a href="datastorage.html" target="_self" style="border:solid; padding:10px;color:mediumseagreen">DATA STORAGE</a>
+			<a href="form.html" target="_self" style="border:solid; padding:10px;color:mediumseagreen">CONTACT US</a>
+		</nav><br><br>
+		</section>
+		<aside style="float: left; padding:40px">
+		
+		</aside>
+		<canvas id="canv1" width="1200" height="100" ></canvas>
+	<script >
+		var can = document.getElementById('canv1');
+		var ctxt = can.getContext('2d');
+		ctxt.font = "30px Georgia";
+		ctxt.strokeStyle="green";
+		ctxt.strokeText("HACKING IS COOL AND INTERESTING! BETTER NOT TO MESS WITH HACKERS! :P  ",10,50);
+	</script>
+	</header>
+	<section style="background-image: url(bg.jpg); padding-top: 10px">
+	<section id="Gradients"> <!— Gradient(Linear and Radial) -->
+		<p id="up_down" align="center">Up-Down</p>
+		<p id="left_right" align="center">Left-Right</p>
+		<p id="angles" align="center">Angles</p>
+		<p id="multi_color" align="center">Multi-Color</p>
+		<p id="repeat_grad" align="center">Repeat Linear Gradient</p>
+		<p id="radial" align="center">Radial</p>
+		<p id="radial_diff_spaced" align="center">Diiferently Spaced Radial Gradient</p>
+		<p id="radial_shape" align="center">Radial Shapes</p>
+		<p id="radial_repeat" align="center">Radial Repeat</p>
+	</section>
+    <footer align="center" background-color="blue">
+        email-id : 170303105169@paruluniversity.ac.in<br>
+        Contact Us : 7405685416<br>
+        Address : XYZ<br>VADODARA<br>GUJARAT
+    </footer>
+</body>
+</html>

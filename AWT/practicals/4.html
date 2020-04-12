@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+	<script type="text/javascript">
+		function EnteredVal()
+		{
+			document.getElementById("Ename").innerHTML = document.contactForm.name.value;
+			document.getElementById("Ecnum").innerHTML = document.contactForm.cnum.value;
+			document.getElementById("Eeid").innerHTML = document.contactForm.eid.value;
+			document.getElementById("Egender").innerHTML = document.contactForm.gender.value;
+			document.getElementById("Eaddress").innerHTML = document.getElementById("address").value;
+			if(document.getElementById("Friends").checked == true)
+				document.getElementById("EWhere").innerHTML += " "+document.getElementById("Friends").value;
+			if(document.getElementById("SM").checked == true)
+				document.getElementById("EWhere").innerHTML += " "+document.getElementById("SM").value;
+			if(document.getElementById("Blogs").checked == true)
+				document.getElementById("EWhere").innerHTML += " "+document.getElementById("Blogs").value;
+			if(document.getElementById("NP").checked == true)
+				document.getElementById("EWhere").innerHTML += " "+document.getElementById("NP").value;
+			if(document.getElementById("Family").checked == true)
+				document.getElementById("EWhere").innerHTML += " "+document.getElementById("Family").value;
+			if(document.getElementById("Articles").checked == true)
+				document.getElementById("EWhere").innerHTML += " "+document.getElementById("Articles").value
+		}
+	</script>
+</head>
+<body>
+	<header >
+		<aside style="float: left; padding:10px">
+		<img src="Logo.png" width="80" ></img>
+		</aside>
+		<H1 style=" text-align:center; font-family:Comic Sans MS ;">LET US KNOW U TO CONTACT U </H1><!—heading in H1 size-->
+		<nav align="center" display="flex" color="green"><!—navigation bar-->
+			<a href="prac1.html" target="_self" style="border:solid; padding:10px">HOME</a>
+		</nav><br>
+	</header>
+	<br><br><br>
+	<section style="background-image: url(bg.jpg); padding-top: 10px"><!—sectioning the web page-->
+		
+		<form name="contactForm" align="center"  ><!—form tag to make up the form-->
+			<b>NAME:</b><input type="text" name="name" placeholder="Enter Full Name" /><br><br>
+			<b>CONTACT NUMBER:</b><input type="text" name="cnum" placeholder="Enter Contact Number" required /><br><br>
+			<b>EMAIL ID:</b><input type="text" name="eid" placeholder="Enter Email Id" /><br><br>
+			<b>GENDER:</b>
+			<input type="radio" id="gender" value="MALE" / >MALE
+			<input type="radio" id="gender" value="FEMALE"/>FMALE<br><br>
+			<b>Where you came to know about my site?</b><br>
+			<input type="checkbox" id="Friends" value="Friends" />Friends<br>
+			<input type="checkbox" id="SM" value="Social Media" />Social Media<br>
+			<input type="checkbox" id="Blogs" value="Blogs" />Blogs<br>
+			<input type="checkbox" id="NP" value="Newspaper" />Newspaper<br>
+			<input type="checkbox" id="Family" value="Family" />Family<br>
+			<input type="checkbox" id="Articles" value="Articles" />Articles<br>
+			<b>ADDRESS:</b><textarea rows="4" cols="50" id="address" form="contactForm"></textarea><br>
+			<input type="submit" id="SUBMIT" value="SUBMIT" onclick="EnteredVal(); return false"><br>
+		</form>
+		<section align="center"><!—making area for the output filled in the form-->
+			<h1>You Entered</h1><br>
+			<b>Name:</b><p id="Ename"></p>
+			<b>Contact Number:</b><p id="Ecnum"></p>
+			<b>Email Id:</b><p id="Eeid"></p>
+			<b>Address:</b><p id="Eaddress"></p>
+			<b>Gender:</b><p id="Egender"></p>
+			<b>You caught Us through:</b><p id="EWhere"></p>
+			<b>Place:</b><p id="demo"></p>
+		</section>
+		<section>
+			<p>Click the button to get your coordinates.</p>
+​			<button onclick="getLocation()">Try It</button>
+			<p id="demo"></p>
+			<script>
+				var loc = document.getElementById("demo");
+				function getLocation() 
+				{
+					if (navigator.geolocation)
+					{
+					navigator.geolocation.getCurrentPosition(showPosition,showError);
+					} 
+					else 
+					{ 
+					loc.innerHTML = "Geolocation is not supported by this browser.";
+					}
+				}
+				function showPosition(position) 
+				{
+					loc.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+				}
+				function showError(error) 
+				{
+					switch(error.code)
+					{
+						case error.PERMISSION_DENIED:
+							loc.innerHTML = "User denied accesss!";
+							break;
+						case error.TIMEOUT:
+							loc.innerHTML = "Request timed out!";
+							break;
+						case error.UNKNOWN_ERROR:
+							loc.innerHTML = "Error can not be decided!";
+							break;
+						case error.POSITION_UNAVAILABLE:
+							loc.innerHTML = "Position not detected!";
+							break;
+					}
+				}
+			</script>
+		</section>
+		<footer align="center" background-color="blue">
+			email-id : 170303105169@paruluniversity.ac.in<br>
+			Contact Us : 7405685416<br>
+			Address : XYZ<br>VADODARA<br>GUJARAT
+		</footer>
+</body>
+</html>
+
+

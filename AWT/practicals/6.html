@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GRAPHICS</title>
+	<style >
+		#T_all 
+		{
+			width: 200px;
+			height: 200px;
+			background: purple;
+			transition-property: width;
+			transition-duration: 3s;
+			transition-timing-function: linear;
+			transition-delay: 0.5s;
+			box-shadow : 10px 10px 5px pink;	
+			background-image: linear-gradient(to left, mediumseagreen, pink);
+		}
+		#T_all:hover 
+		{
+			width: 400px;
+			transform: rotate(180deg);
+		}
+		#T_a 
+		{
+			width: 200px;
+			height: 200px;
+			background: purple;
+			transition: width 2s, height 4s;
+			box-shadow : 10px 10px 5px pink;	
+			background-image: radial-gradient(mediumseagreen, blue, pink);
+		}
+		#T_a:hover  
+		{
+			width: 400px;
+			height: 400px;
+		}
+		H1
+		{
+			color:purple;
+			text-shadow: 1px 1px 40px black, 0 0 5px grey;
+		}
+		body
+		{
+			border: 10px solid transparent;
+			padding: 15px;
+			border-image: url(border.png) 30 stretch;
+			border-image-width: 30px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<section style="background-image: url(head.jpeg); ">
+		<aside style="float: left; padding:10px">
+		<img src="Logo.png" width="80" ></img>  
+		</aside>
+		<H1 style=" text-align:center;font-family:Comic Sans MS ; color:mediumseagreen">MY PAGE FOR COMPUTER HACKING</H1>
+		<nav  align="center" style="color:green;" >
+			<a href="/index.html" target="_self" style="border:solid; padding:10px;color:mediumseagreen">HOME</a>
+		
+		</nav><br><br>
+		</section>
+		<aside style="float: left; padding:40px">
+		</aside>
+		<canvas id="canv1" width="1200" height="100" ></canvas>
+	<script >
+		var can = document.getElementById('canv1');
+		var ctxt = can.getContext('2d');
+		ctxt.font = "30px Georgia";
+		ctxt.strokeStyle="green";
+		ctxt.strokeText("HACKING IS COOL AND INTERESTING! BETTER NOT TO MESS WITH HACKERS! :P  ",10,50);
+	</script>
+	</header>
+	<section style="background-image: url(bg.jpg); padding-top: 10px">
+	<section>  <!— Transition  -->
+		<p id="T_all" align="center">Transition with linear timing function</p>
+		<p id="T_a" align="center">Transition with height/width increase</p>
+	</section>
+	<footer align="center" background-color="blue">
+        email-id : 170303105169@paruluniversity.ac.in<br>
+        Contact Us : 7405685416<br>
+        Address : XYZ<br>VADODARA<br>GUJARAT
+    </footer>
+</body>
+</html>
